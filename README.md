@@ -35,7 +35,9 @@ To run this project, install the following Python libraries:
 ```bash
 pip install pandas matplotlib numpy scikit-learn
 
-## Pipline
+---
+
+## pipeline
 
 Data Preprocessing
 Load and explore the dataset (heart_disease_df_1.csv).
