@@ -37,14 +37,17 @@ pip install pandas matplotlib numpy scikit-learn
 
 ---
 
+
+
 ## Pipeline
 
-1. Data Preprocessing
-Load and Explore the Dataset: Work with heart_disease_df_1.csv.
-Visualize Key Features: E.g., cholesterol distribution.
-Handle Missing Data: Use SimpleImputer to replace missing values.
-Drop Unnecessary Columns: Removed oldpeak and duplicates.
-Impute Missing Values: Fill missing values in the restecg column with the mean.
+### 1. **Data Preprocessing**
+- **Load and Explore the Dataset**: Work with `heart_disease_df_1.csv`.
+- **Visualize Key Features**: E.g., cholesterol distribution.
+- **Handle Missing Data**: Use `SimpleImputer` to replace missing values.
+- **Drop Unnecessary Columns**: Removed `oldpeak` and duplicates.
+- **Impute Missing Values**: Filled missing values in the `restecg` column with the mean.
+
 ---
 
 ### 2. **Feature Engineering**
@@ -85,7 +88,7 @@ Train multiple models, including:
 
 ---
 
- 6. **Model Deployment**
+### 6. **Model Deployment**
 #### **Testing the Model**
 - Validate the model pipeline using `unittest`:
   - Ensure predictions match the number of test samples.
@@ -93,3 +96,9 @@ Train multiple models, including:
 
 ---
 
+## How to Run
+
+### 1. **Clone the Repository**:
+```bash
+git clone https://github.com/yourusername/heart-disease-prediction.git
+cd heart-disease-prediction
