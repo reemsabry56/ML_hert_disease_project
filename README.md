@@ -37,38 +37,67 @@ pip install pandas matplotlib numpy scikit-learn
 
 ---
 
-## pipeline
 
-Data Preprocessing
-Load and explore the dataset (heart_disease_df_1.csv).
-Visualize key features (e.g., cholesterol distribution).
-Handle missing data using SimpleImputer.
-Drop unnecessary columns (oldpeak) and duplicates.
-Impute missing values in the restecg column with the mean.
-Feature Engineering
-Normalization:
+## Pipeline
 
-Normalize features (e.g., age) to the range [0, 1] using MinMaxScaler.
-Visualize the effect of normalization.
-Standardization:
+### 1. **Data Preprocessing**
+- **Load and Explore the Dataset**: Work with `heart_disease_df_1.csv`.
+- **Visualize Key Features**: E.g., cholesterol distribution.
+- **Handle Missing Data**: Use `SimpleImputer` to replace missing values.
+- **Drop Unnecessary Columns**: Removed `oldpeak` and duplicates.
+- **Impute Missing Values**: Filled missing values in the `restecg` column with the mean.
 
-Standardize features to have a mean of 0 and a variance of 1 using StandardScaler.
-Visualize the effect of standardization.
-Feature Selection:
+---
 
-Use a RandomForestClassifier with SelectFromModel to identify the most important features.
-Visualize feature importance using bar plots.
-Model Training
+### 2. **Feature Engineering**
+#### **Normalization**
+- Normalize features (e.g., `age`) to the range [0, 1] using `MinMaxScaler`.
+- Visualize the effect of normalization with histograms.
+
+#### **Standardization**
+- Standardize features to have a mean of 0 and a variance of 1 using `StandardScaler`.
+- Visualize the effect of standardization with histograms.
+
+#### **Feature Selection**
+- Use a `RandomForestClassifier` with `SelectFromModel` to identify the most important features.
+- Visualize feature importance using bar plots.
+
+---
+
+### 3. **Model Training**
 Train multiple models, including:
-Support Vector Machine (SVM):
-Use a linear kernel for classification.
-Logistic Regression:
-Train with max_iter=1000 to ensure convergence.
-Handle missing data during training using SimpleImputer.
-Model Evaluation
-Evaluate models using:
-Balanced Accuracy: Measure how well the model handles imbalanced datasets.
-Confusion Matrix: Interpret true positives, false positives, true negatives, and false negatives.
-K-Fold Cross-Validation: Ensure robust evaluation by testing on multiple splits of the data.
-Confusion Matrix Interpretation
-Use the confusion matrix to analyze model performance across all predicted classes.
+- **Support Vector Machine (SVM)**:
+  - Use a linear kernel for classification.
+- **Logistic Regression**:
+  - Trained with `max_iter=1000` to ensure convergence.
+- **Handle Missing Data**:
+  - Use `SimpleImputer` to preprocess missing values during training.
+
+---
+
+### 4. **Model Evaluation**
+- **Balanced Accuracy**: Measure model performance on imbalanced datasets.
+- **Confusion Matrix**: Analyze true positives, false positives, true negatives, and false negatives.
+- **K-Fold Cross-Validation**: Evaluate robustness using multiple dataset splits.
+
+---
+
+### 5. **Confusion Matrix Interpretation**
+- Use the confusion matrix to analyze model performance across all predicted classes.
+
+---
+
+### 6. **Model Deployment**
+#### **Testing the Model**
+- Validate the model pipeline using `unittest`:
+  - Ensure predictions match the number of test samples.
+  - Verify model integration for deployment.
+
+---
+
+## How to Run
+
+### 1. **Clone the Repository**:
+```bash
+git clone https://github.com/yourusername/heart-disease-prediction.git
+cd heart-disease-prediction
