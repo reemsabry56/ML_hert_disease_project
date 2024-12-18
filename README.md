@@ -13,8 +13,6 @@ This repository contains a complete pipeline for heart disease prediction, start
     - [Model Training](#model-training)
     - [Model Evaluation](#model-evaluation)
 4. [Model Deployment](#model-deployment)
-5. [How to Run](#how-to-run)
-6. [License](#license)
 
 ---
 
@@ -96,9 +94,3 @@ Train multiple models, including:
 
 ---
 
-## How to Run
-
-### 1. **Clone the Repository**:
-```bash
-git clone https://github.com/yourusername/heart-disease-prediction.git
-cd heart-disease-prediction
